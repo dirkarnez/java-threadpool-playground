@@ -30,4 +30,19 @@ public class HelloWorld{
         System.out.println("Finished all threads");  
      }
 }
+/*
+https://github.com/synthetichealth/synthea/blob/master/src/main/java/org/mitre/synthea/engine/Generator.java
+      java.util.concurrent
+ExecutorService threadPool = Executors.newFixedThreadPool(threadPoolSize);
 
+ threadPool.submit(() -> generatePerson(index, seed));
+ try {
+      threadPool.shutdown();
+      while (!threadPool.awaitTermination(30, TimeUnit.SECONDS)) {
+        System.out.println("Waiting for threads to finish... " + threadPool);
+      }
+    } catch (InterruptedException e) {
+      System.out.println("Generator interrupted. Attempting to shut down associated thread pool.");
+      threadPool.shutdownNow();
+    }
+*/
